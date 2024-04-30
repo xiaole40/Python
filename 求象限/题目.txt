@@ -1,0 +1,58 @@
+问题：
+已知坐标（x,y）判断其所在的象限。
+分析：有多种情况，坐标点可能在四个象限里，
+也可能在坐标轴上，甚至可能在原点，
+
+第一种解答：
+
+(x,y)=int(input("请输入一个坐标点（x,y）"))
+if x=0 , y=0:
+    print("坐标点在原点")
+elif x>0 , y=0:
+    print("坐标点在X轴正方向上")
+elif x=0 , y>0:
+    print("坐标点在Y轴正方向上")
+elif x<0 , y=0:
+    print("坐标点在X轴负方向上")
+elif x=0 , y<0:
+    print("坐标点在Y轴负方向上")
+elif x>0 , y>0:
+    print("坐标点在第一象限")
+elif x<0 , y>0:
+    print("坐标点在第二象限")
+elif x<0 , y<0:
+    print("坐标点在第三象限")
+else
+    print("坐标点在第四象限")
+
+第二种解答：
+x=float(input("请输入一个横坐标:"))
+y=float(input("请输入一个纵坐标："))
+if x>0:
+    if y==0:
+        print("坐标点在X轴正半轴上")
+    else:
+        if y>0:
+            print("坐标点在第一象限")
+        else:
+            print("坐标点在第四象限")
+else:
+    if y>0:
+        if x<0:
+            print("坐标点在第二象限")
+        else:
+            if x==0:
+                print("坐标点在Y轴正半轴上")
+if x<0:
+        if y==0:
+            print("坐标点在X轴负半轴上")
+        else:
+            if y<0:
+                print("坐标点在第三象限")
+else:
+    if y<0:
+        if x==0:
+            print("坐标点在Y轴负半轴上")
+if x==0:
+    if y==0:
+        print("坐标点在原点")

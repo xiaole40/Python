@@ -1,0 +1,6 @@
+print('{:-^30}'.format('个人信息'))
+print()
+print('姓名:{:*>26}'.format('王丽'))
+print('专业:{:*<26}'.format('文秘'))
+print('学费:{:_^28,.3f}'.format(214567.963))
+print()
